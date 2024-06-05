@@ -1,0 +1,124 @@
+
+.myReels{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+.myReelsDiv{
+    width: calc((100% - .9rem)/4);
+    aspect-ratio: 1/1.6;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.myReels1{
+    width: 100%;
+    aspect-ratio: 1/1.6;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.myReels1>img,.myReels1>video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: var(--background2);
+}
+.myReels11{
+    position: absolute;
+    height: 1.1rem;
+    width: 1.1rem;
+    top: .5rem;
+    right: .5rem;
+}
+
+.reelModal{
+    width: calc(100% - 15rem);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter:  blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+}
+.reelModal1{
+    height: 10rem;
+    width: 10rem;
+    transform: translateX(100%);
+}
+.cancelDiv{
+    z-index: 40;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    right: 2rem;
+    top: 2rem;
+    height: 2rem !important;
+    width: 2rem !important;
+    color: var(--text1);
+}
+.forward{
+    z-index: 400;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    right: 1rem;
+    top: calc( (100% - 2rem) / 2 );
+    height: 2rem !important;
+    width: 2rem !important;
+    color: var(--text1);
+}
+.backward{
+    z-index: 400;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    left: 1rem;
+    rotate: 180deg;
+    top: calc( (100% - 2rem) / 2 );
+    height: 2rem !important;
+    width: 2rem !important;
+    color: var(--text1);
+}
+@media screen and (max-width:1024px) {
+    .myReelsDiv{
+        width: calc((100% - .9rem)/3);
+        aspect-ratio: 1/1.6;
+        overflow: hidden;
+        position: relative;    
+    }
+}
+@media screen and (max-width:767px) {
+    .reelModal{
+        height: calc(100% - 3.5rem );
+        width: 100%;
+    }
+    .cancelDiv{
+        z-index: 40;
+        position: absolute;
+        height: 1.5rem;
+        width: 1.5rem;
+        left: 1rem;
+        top: 1rem;
+        color: var(--text1);
+    }
+}
+@media screen and (min-width:426px) and (max-width:767px) {
+    .reelModal>div{
+        scale: 0.98;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1439px) {
+    .reelModal{
+        width: calc(100% - 4rem);
+    }
+}

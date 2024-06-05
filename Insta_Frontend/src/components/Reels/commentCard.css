@@ -1,0 +1,46 @@
+.comment {
+  width: 100%;
+  min-height: 3rem;
+  height: auto;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.1rem 0;
+  display: flex;
+}
+.comment1 {
+  height: 3rem;
+  width: 12%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.2rem 0.7rem;
+}
+.comment1 > img {
+  height: 1.7rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.comment2 {
+  width: 88%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 0.5rem;
+  flex-direction: column;
+}
+.comment2 > p:first-child {
+  font-size: 0.8rem;
+  color: var(--text1);
+  font-weight: bold;
+  cursor: pointer;
+}
+.comment2 > p:last-child {
+  font-size: 0.7rem;
+  color: var(--text2);
+
+  cursor: pointer;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,207 @@
+.home {
+  width: 100%;
+  color: var(--text1);
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.homeCenter {
+  height: auto;
+  width: 27rem;
+  transform: translateX(-5rem);
+  margin: 0.5rem 0;
+}
+.homeCenter1 {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+.homeCenter2 {
+  width: 100%;
+}
+
+.suggestedUserDiv {
+  position: absolute;
+  height: 25rem;
+  width: 20rem;
+  right: 2rem;
+  top: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.suggestedUserDiv1 {
+  height: 1.2rem;
+  width: 100%;
+}
+.suggestedUserDiv1 > p {
+  color: var(--text2);
+  font-weight: 550;
+  font-size: 1rem;
+}
+.suggestedUserDiv2 {
+  height: calc(100% - 1.2rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 0;
+}
+.suggestedUserCard {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  gap: 0.3rem;
+  text-decoration: none;
+  position: relative;
+}
+.suggestedUserCard1 {
+  border-radius: 50px;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.suggestedUserCard1 > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.suggestedUserCard2 {
+  height: 2.5;
+  width: calc(100% - 8rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3;
+  justify-content: center;
+}
+.suggestedUserCard3 {
+  height: 100%;
+  width: 3.2rem;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.suggestedUserCard3 > p {
+  color: var(--button);
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 1rem;
+}
+.suggestedUserCard2 > p {
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.suggestedUserCard2 > a {
+  width: auto;
+  color: var(--text1) !important;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.suggestedUserCard2 > p:last-child {
+  width: auto;
+  font-size: 0.8rem;
+  color: var(--text2);
+}
+
+.suggestedLoaderCard {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  gap: 0.3rem;
+}
+.suggestedLoaderCard1 {
+  border-radius: 50px;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--background2);
+  animation: searchCardAnimation 1s ease infinite;
+}
+.suggestedLoaderCard2 {
+  height: 2.5rem;
+  width: calc(100% - 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  justify-content: center;
+  position: relative;
+}
+.suggestedLoaderCard2 > p {
+  height: 1rem;
+  animation: searchCardAnimation 1s ease infinite;
+  background-color: var(--background2);
+  border-radius: 5px;
+}
+.suggestedLoaderCard2 > p:first-child {
+  width: 90%;
+}
+.suggestedLoaderCard2 > p:last-child {
+  width: 60%;
+}
+@keyframes searchCardAnimation {
+  0% {
+    background-color: var(--background2);
+  }
+  50% {
+    background-color: var(--background3);
+  }
+  100% {
+    background-color: var(--background2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    padding-top: 0rem !important;
+  }
+  .home > div:first-child {
+    height: 3rem;
+    width: 100%;
+    background-color: var(--background2);
+    border-bottom: 1px solid var(--border);
+    margin: 0;
+  }
+  .homeCenter {
+    margin-top: 0rem;
+    /* height: calc(100vh - 6rem); */
+    padding-bottom: 7rem;
+    height: auto;
+    width: 100%;
+    max-width: 425px;
+    transform: translateX(0rem);
+    margin: 0.5rem 0;
+  }
+  .homeCenter1 {
+    height: 2.3rem;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    padding-top: 1rem;
+    font-weight: 550;
+  }
+  .homeCenter2 {
+    width: 100%;
+  }
+}
+@media screen and (min-width:767px)and (max-width: 1439px) {
+  .homeCenter {
+    height: auto;
+    width: 27rem;
+    transform: translateX(0rem);
+    margin: 0.5rem 0;
+  }
+}

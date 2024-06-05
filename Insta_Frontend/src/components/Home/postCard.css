@@ -1,0 +1,264 @@
+.postCard {
+  height: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--cardBorder);
+  transition: all .5s ease;
+}
+.postCard1 {
+  height: auto;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+}
+.postCard11 {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+.followingDiv {
+  height: 100%;
+  padding: 0 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  position: absolute;
+}
+.followingDiv > p {
+  cursor: pointer;
+  font-weight: normal;
+}
+.following {
+  color: var(--text1);
+}
+.notFollowing {
+  color: var(--button);
+}
+.postCard11 > img {
+  height: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.postCard11 > p > span:first-child {
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.001rem;
+  color: var(--text1);
+  cursor: pointer;
+}
+.postCard11 > p > span:last-child {
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+.postCard2 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--cardBorder);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background2);
+}
+.rightArrow {
+  position: absolute;
+  overflow: hidden;
+  top: calc((100% - 1.5rem) / 2);
+  right: 1rem;
+  color: var(--text1);
+}
+.leftArrow {
+  position: absolute;
+  overflow: hidden;
+  top: calc((100% - 1.5rem) / 2);
+  left: 1rem;
+  color: var(--text1);
+}
+.rightArrow > svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+.leftArrow > svg {
+  cursor: pointer;
+  height: 1.5rem;
+  rotate: 180deg;
+  width: 1.5rem;
+}
+.indicesCircle {
+  position: absolute;
+  bottom: 1.2rem;
+  width: 80%;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+.circles {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.postCard2 > img {
+  object-fit: cover;
+  height: auto;
+  width: 70%;
+  aspect-ratio: 9/16;
+  transition: all 2s ease;
+}
+.postCard2 > video {
+  object-fit: cover;
+  height: auto;
+  width: 70%;
+  aspect-ratio: 9/16;
+}
+.postCard3 {
+  min-height: 5rem;
+  height: auto;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  transition: all 2s ease;
+}
+.postCard31{
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.postCard31>p{
+  right: 0  ;
+  position: absolute;
+}
+.postLikeDiv {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 0.2rem;
+  filter: contrast(50%);
+  color: var(--background2);
+  padding-bottom: 0rem;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: transparent;
+}
+.postLikeDiv > svg {
+  height: 1.2rem;
+  cursor: pointer;
+}
+.like{
+  filter: contrast(90%);
+}
+.postCard3Desc {
+  cursor: pointer;
+  margin: .5rem 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width:767px) {
+  .postCard {
+    margin: .5rem 0;
+  }
+  .postCard1 {
+    padding: 0.2rem 0.5rem;
+  }
+  .postCard11 {
+    width: 100%;
+    height: 3rem;
+  }
+  .followingDiv {
+    height: 100%;
+    padding: 0 0.5rem;
+  }
+  .followingDiv > p {
+    font-size: .8rem;
+  }
+  .postCard11 > img {
+    height: 2.3rem;
+  }
+  
+  .postCard11 > p > span:first-child {
+    font-size: 0.8rem;
+  }
+  .postCard11 > p > span:last-child {
+    font-size: 0.7rem;
+  }
+  .postCard2 {
+    padding: .3rem 0;
+    position: relative;
+  }
+  .postCard2>.actionDiv>svg{
+    height: 1rem;
+  }
+  .rightArrow {
+    top: calc((100% - 1.3rem) / 2);
+  }
+  .leftArrow {
+    top: calc((100% - 1.3rem) / 2);
+  }
+  .rightArrow > svg {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  .leftArrow > svg {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  .indicesCircle {
+    bottom: .3rem;
+  }
+  .circles {
+    height: 0.4rem;
+    width: 0.4rem;
+  }
+  .postCard3 {
+    min-height: 4rem;
+    height: auto;
+    padding: 0.3rem 0.6rem;
+    transition: all 2s ease;
+  }
+  .postCard31{
+    height: 1.5rem;
+  }
+  .postCard31>p{
+    font-size: .8rem;
+  }
+  .postLikeDiv {
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 0.2rem;
+    padding-bottom: 0rem;
+    overflow: hidden;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .postLikeDiv > svg {
+    height: 1rem;
+    cursor: pointer;
+  }
+  .postCard3Desc {
+    cursor: pointer;
+    margin: .5rem 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: .8rem;
+  }
+  
+  
+}

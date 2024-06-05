@@ -1,0 +1,87 @@
+.searchLoader{
+    position: absolute;
+    top: 0;
+    height: auto;
+    min-height: 40rem;
+    width: 100%;
+    padding: .5rem 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    color: var(--text1);
+    padding: 1.2rem 0;
+}
+.searchLoaderCard{
+    width: 90%;
+    height: 3rem;
+    display: flex;
+    gap: .7rem;
+}
+.searchLoaderCard1{
+    border-radius: 50px;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--background2);
+    animation: searchCardAnimation 1s ease infinite;
+}
+.searchLoaderCard2{
+    height: 3rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    justify-content: center;
+}
+.searchLoaderCard2>p{
+    height: 1rem;
+    animation: searchCardAnimation 1s ease infinite;
+    background-color: var(--background2);
+    border-radius: 3px;
+}
+.searchLoaderCard2>p:first-child{
+    width: 20rem;
+}
+.searchLoaderCard2>p:last-child{
+    width: 15rem;
+}
+@keyframes searchCardAnimation {
+    0%{
+        background-color: var(--background2);
+    }
+    50%{
+        background-color: var(--background3);
+    }
+    100%{
+        background-color: var(--background2);
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .searchLoader{
+        position: absolute;
+        height: auto;
+        min-height: 40rem;
+        overflow: hidden;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: .5rem;
+        color: var(--text1);
+    }
+
+    .searchLoaderCard{
+        width: 94%;
+    }
+    .searchLoaderCard2>p:first-child{
+        width: 18.2rem;
+    }
+    .searchLoaderCard2>p:last-child{
+        width: 12rem;
+    }
+}

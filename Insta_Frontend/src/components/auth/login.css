@@ -1,0 +1,260 @@
+.login {
+    height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    padding-top: 4rem;
+}
+
+.login>div {
+    height: auto !important;
+    width: 20rem;
+    margin: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* .loginImg {
+    display: flex;
+    justify-content: center;
+} */
+
+/* .loginImg>img {
+    height: 100%;
+} */
+
+.loginForm {
+    height: auto !important;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 !important;
+
+}
+
+.loginForm>div {
+    height: 5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #121212;
+}
+
+.loginForm>div>img {
+    height: 4.5rem;
+    width: 29rem !important;
+    margin-top: 4rem;
+}
+
+.loginForm>form {
+    height: auto !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    margin: 0 !important;
+}
+
+.loginForm>form>div {
+    width: 80%;
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.loginForm>form>div>input {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0 .5rem;
+    background-color: #fafafa;
+    outline: 0px;
+    border: 1px solid #e2e2e2;
+}
+
+.loginForm>form>div>svg {
+    position: absolute;
+    transform: translateX(.5rem);
+    color: #666464;
+}
+
+.loginBtn {
+    height: 2.5rem;
+    width: 80%;
+    border: none;
+    background-color: #0095f6;
+    color: whitesmoke;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: all .5s;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: normal;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    background-color: #1877f2;
+}
+
+.loginForm>form>.span {
+    width: 80%;
+    height: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #8e8e8e;
+}
+
+.loginForm>form>.span>div {
+    width: 40%;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.questionForSignUp {
+    color: #8e8e8e;
+    margin-top: 1.5rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.questionForSignUp>span {
+    color: #0095f6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropzone {
+    position: relative;
+}
+
+.dropzone>input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+
+    /* .login {
+    } */
+    .login::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../../images/insta.png);
+        background-size: cover;
+        filter: grayscale(100%);
+    }
+
+    .login>div {
+        opacity: .9;
+    }
+}
+
+/* for tablet */
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .login>div {
+        height: auto;
+        width: 15rem;
+        margin: 1rem;
+        margin-top: 3rem;
+        scale: 1.2;
+    }
+
+    .questionForSignUp {
+        font-size: .7rem;
+        margin-top: 0;
+    }
+
+    .loginForm>div>img {
+        height: 3.5rem;
+        /* width: 24rem !important; */
+        margin-top: 3rem;
+    }
+
+    .loginForm>form>div {
+        width: 80%;
+        height: 2rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: .5rem 0;
+    }
+
+    .loginForm>form>div>input {
+        font-size: .7rem;
+    }
+
+    .loginForm>form>.span {
+        margin-top: 1rem;
+        margin-bottom: .8rem;
+        font-size: .8rem;
+    }
+
+    .loginBtn {
+        height: 2rem;
+        border-radius: 5px;
+        margin-top: 1rem;
+        transition: all .5s;
+        font-weight: 550;
+    }
+
+
+}
+
+
+/* for mobile devices */
+
+@media screen and (max-width:767px) {
+    .login {
+        height: 100vh;
+        max-height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #fafafa;
+        padding-top: 0;
+        padding: 0 !important;
+    }
+
+    .login>div {
+        height: 100% !important;
+        width: 20rem;
+        margin: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .loginForm {
+        height: 100vh !important;
+        width: 100vw !important;
+        margin: 0 !important;
+    }
+
+    .loginForm>form {
+        height: 80%;
+        width: 80%;
+        max-width: 20rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

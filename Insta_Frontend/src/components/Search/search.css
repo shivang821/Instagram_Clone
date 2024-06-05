@@ -1,0 +1,193 @@
+.search{
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 0 !important;
+    position: absolute;
+}
+.search2 {
+    position: absolute;
+    height: 100%;
+    max-width: 30rem;
+    width: 100%;
+}
+.search21{
+    position: sticky;
+    z-index: 5;
+    top: 0rem;
+    left: 0;
+    width: 100%;
+    height: 5.7rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--background3);
+    background-color: var(--background1);
+}
+.search21>div{
+    width: 100%;
+    height: 5.7rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search21>div>div{
+    position: relative !important;
+    width: 90%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+.search21>div>div>input::placeholder{
+    font-size: 1.2rem !important;
+    color: var(--text3);
+    
+}
+.search21>div>div>input{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background2);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 2.7rem;
+    padding-right: 2.7rem;
+    font-size: 1.2rem;
+    color: var(--text2);
+    font-weight: normal;
+    
+}
+.search21>div>div>svg:first-child{
+    position: absolute;
+    height: 1.2rem !important; 
+    width: 1.2rem !important;
+    left: 1rem;
+    margin: auto 0;
+    z-index: 5;
+    color: var(--text3);
+    transform: translateY(.1rem);
+}
+.search21>div>div>svg:last-child{
+    position: absolute;
+    height: 1.2rem !important; 
+    width: 1.2rem !important;
+    right: 1rem;
+    margin: auto 0;
+    z-index: 5;
+    color: var(--text3);
+    transform: translateY(.1rem);
+    cursor: pointer;
+}
+
+.search22{
+    min-height: calc(100% - 5.7rem);
+    height: auto;
+    width: 100%;
+    padding: .5rem 0;
+    z-index: 4;
+    padding: .5rem 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    position: relative;
+    padding: 1.2rem 0;
+}
+
+.searchCard{
+    width: 90%;
+    height: 3rem;
+    display: flex;
+    gap: .7rem;
+    text-decoration:none ;
+}
+.searchCard1{
+    border-radius: 50px;
+    height: 3rem;
+    width: 3rem;
+}
+.searchCard1>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.searchCard2{
+    height: 3rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    justify-content: center;
+}
+.searchCard2>p{
+    border-radius: 5px;
+}
+.searchCard2>p:first-child{
+    width: 20rem;
+    color: var(--text1);
+    font-weight: bold;
+    font-size: 1rem;
+}
+.searchCard2>p:last-child{
+    width: 15rem;
+    font-size: .8rem;
+    color: var(--text2);
+}
+@media screen and (max-width:767px) {
+    .search{
+        height: 100%;
+        overflow-y: auto;
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        place-items: center;
+        padding: 0 !important;
+        position: relative;
+    }
+    .search2 {
+        min-height: 100%;
+        max-width: 30rem;
+        width: 100%;
+    }
+    .search21{
+        position: sticky;
+        z-index: 5;
+        top: 0rem;
+        left: 0;
+        width: 100%;
+        height: 4.7rem;
+        
+    }
+    .search21>div{
+        height: 4.7rem; 
+        align-items: center;
+        padding: 0;
+    }
+    
+    .search22{
+        min-height: calc(100% - 4.7rem) !important;
+        height: auto;
+        width: 100%;
+        padding: 1rem 0 !important;
+        z-index: 4;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: .5rem;
+      
+    }
+    .searchCard{
+        width: 94%;
+    }
+    .searchCard2>p:first-child{
+        width: 18.2rem;
+    }
+    .searchCard2>p:last-child{
+        width: 12rem;
+    }
+}

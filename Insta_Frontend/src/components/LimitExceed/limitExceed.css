@@ -1,0 +1,16 @@
+.limitExceed{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.limitExceed>h3{
+    color: var(--text3);
+    font-size: 2rem;
+}
+@media screen and (max-width:767px) {
+    .limitExceed>h3{
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,205 @@
+.sidebar{
+    width: 100%;
+    max-width: 15rem;
+    height: 100%;
+    position: relative;
+    background-color: var(--background1);
+    border-right:1px solid var(--border) ;
+    z-index: 20;
+}
+.sidebar1{
+    background-color: var(--background1);
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* transition: background-color linear .3s ; */
+}
+@font-face {
+    font-family: instaFont;
+    src: url('./instaFont7.ttf');
+}
+.sidebarTop{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 1.8rem;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+}
+.sidebarTop>h1{
+    color: transparent;
+    -webkit-background-clip:text ;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.sidebarTop>img{
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.sidebarMiddle{
+    width: 100%;
+    height: 70%;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    display: flex;
+}
+.sidebarMiddle>a,.sidebarMiddle>div,.sidebarBottom>div{
+    width: 90%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: .8rem;
+    gap: .8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text2);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.sidebarMiddle>a:hover,.sidebarMiddle>div:hover,.sidebarBottom>div:hover{
+    background-color: var(--background2);
+}
+.sidebarMiddle>a>p,.sidebarMiddle>div>p,.sidebarBottom>div>p{
+    font-size: 1.2rem;
+    color: var(--text1);
+}
+.sidebarMiddle>a>svg,.sidebarMiddle>div>svg {
+    color: var(--text1);
+    fill: var(--text1);
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.sidebarMiddle>a>img{
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 50%;
+}
+.sidebarBottom{
+    height: 15%;
+    width: 100%;
+    padding-left: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    display: flex;
+}
+.sidebarBottom>div{
+    color: var(--text1);
+}
+.sidebarBottom>div>svg{
+    color: var(--text1);
+    fill: var(--text1);
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.lightModeIcon{
+    scale: 1.1;
+}
+.darkModeIcon{
+    rotate: 100deg;
+    scale: .95;
+}
+/* .darkswitch{
+    transform: translate(-.2rem,2px);
+} */
+@media screen and (min-width:768px) and (max-width:1439px) {
+    .sidebar{
+        max-width: 4rem;
+    }
+    .sidebarTop{
+        align-items: center;
+        padding-left: 0;
+    }
+    .sidebarTop>img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .sidebarMiddle{
+        padding-left: 0;
+        align-items: center;
+    }
+    .sidebarMiddle>a,.sidebarMiddle>div{
+        width: 3.3rem;
+        height: 3.3rem;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .sidebarMiddle>a>svg,.sidebarMiddle>div>svg {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+    .sidebarMiddle>a>img{
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+    .sidebarBottom{
+        padding-left: 0;
+        justify-content: center;
+    }
+    .sidebarBottom>div>svg{
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+}
+@media screen and (max-width:767px) {
+    .sidebar{
+        max-width:100%;
+        height: 3.5rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-top: 2px solid var(--border);
+        opacity: 1 !important;
+        border-right: none;
+    }
+    .sidebar1{
+        border-top: 0;
+    }
+    .sidebarTop{
+        align-items: center;
+        opacity: 1 !important;
+        padding-left: 0;
+        display: none;
+    }
+    .sidebarTop>img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .sidebarMiddle{
+        height: 3.5rem;
+        width: 100%;
+        justify-content: space-evenly;
+        gap:.5rem;
+        padding-left: 0;
+        align-items: center;
+        flex-direction: row;
+    }
+    .sidebarMiddle>a,.sidebarMiddle>div{
+        height: auto;
+        width: auto ;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .sidebarMiddle>a>svg,.sidebarMiddle>div>svg {
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+    .sidebarMiddle>a>img{
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+    .sidebarMiddle>a:hover,.sidebarMiddle>div:hover{
+        background-color: transparent;
+    }
+}

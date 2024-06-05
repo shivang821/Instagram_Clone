@@ -1,0 +1,408 @@
+.createModal{
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.innerModal{
+    position: fixed;
+    background-color: var(--background2);
+    opacity: 1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 35rem ;
+}
+.createModalTop{
+    height: 3rem;
+    width: 100%;
+    border-bottom: .1rem solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.createModalTop>p{
+    font-size: 1.2rem;
+    color: var(--text2);
+    font-weight: 400;
+}
+.nextButton{
+    position: absolute;
+    right: 1.5rem;
+    color: var(--button);
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-radius: 5px;
+    transition: all .5s linear;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+.nextButton:hover{
+    color: var(--buttonHover);
+}
+.createModaBottom{
+    height: calc( 100% - 3rem);
+    width: 100%;
+}
+.createModaBottom>div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+.createModaBottom>div>svg{
+    color: var(--text2);
+    fill: var(--text2);
+}
+.createModaBottom>div>p{
+    color: var(--text2);
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+.emptyPost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem !important;
+    /* flex-direction: row !important; */
+}
+.emptyPost>button{
+    height: 2.2rem;
+    width: 12rem;
+    background-color: var(--button);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: 550;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .5px;
+}
+.backIcon{
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 1rem;
+    cursor: pointer;
+    transition: all .5s;
+    fill: var(--button);
+}
+.backIcon>svg{
+    height: 1.2rem;
+}
+.backIcon:hover{
+    fill: var(--buttonHover);
+    background-color: var(--background3);
+}
+#postDiv{
+    height: 2.2rem;
+    width: 11rem;
+    background-color: var(--button);
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+#postDiv:hover{
+    background-color: var(--buttonHover);
+}
+#postDiv>label{
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: 550;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.createModaBottom>button>input{
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+}
+.files{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    flex: 1;
+    overflow: hidden;
+    position: relative !important;
+
+}
+.files>div{
+    height: 32rem;
+    width: 35rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.files>div>img{
+    max-height: 98%;
+    height: auto;
+    width: auto;
+    max-width: 90%;
+    border-radius: 5px;    
+    object-fit: contain;
+}
+.files>div>div{
+    height:98%;
+    position:relative !important;
+    overflow: hidden;
+    /* display: none; */
+    aspect-ratio: 9/16;
+    animation: showDiv .5s linear forwards;
+}
+@keyframes showDiv {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.muteIcon{
+    color: white;
+    fill: white;
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index:20;
+    scale:.95;
+    cursor:pointer;
+    opacity: .7;
+}
+.unMuteIcon{
+    opacity: .7;
+    color: white;
+    fill: white;
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index:20;
+    cursor:pointer;
+}
+.files>div>div>video{
+    border: none;
+    outline: none;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* .files>div>div>video::-webkit-media-controls{
+    display: none;  
+ } */
+
+.files>.left{
+    height: 3rem;
+    width: 3rem !important;
+    position: absolute;
+    /* top: 49%; */
+    top: 15rem;
+    left: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+}
+.files>.left:hover{
+    background-color: var(--background3);
+}
+.files>.left>svg{
+    fill: var(--text1);
+    height: 1.5rem;
+    width: 1.5rem;
+    rotate: -90deg;
+    transform: translateY(-1px);
+}
+.files>.right{
+    height: 3rem;
+    width: 3rem !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15rem;
+    right: 2rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.files>.right:hover{
+    background-color: var(--background3);
+}
+.files>.right>svg{
+    fill: var(--text1);
+    height: 1.5rem;
+    width: 1.5rem;
+    rotate: 90deg;
+    transform: translateY(-1px);
+}
+
+.bar1{
+    position: absolute;
+    bottom: 0;
+    height: 2px !important;
+    width: 100%;
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+.progress1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.progress1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 150%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: inherit;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progress 1s ease-in-out infinite ;
+}
+
+@keyframes progress {
+    50%{
+        transform: scaleX(1);
+    }100%{
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+@media screen and (max-width:767px) {
+    .createModal{
+        height: 100vh;
+        width: 100vw;
+        z-index: 5;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 30;
+        background-color: rgba(0, 0, 0, 0.233);
+        backdrop-filter: blur(1px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .innerModal{
+        height: 30rem;
+        width: 20rem;
+        margin-bottom: 3.5rem;
+    }
+    .files{
+        height: 27rem !important;
+    }
+    .files>div{
+        height: 27rem;
+        width: 20rem !important;
+    }
+    .files>.left{
+        height: 2rem;
+        width: 2rem !important;
+        left: .5rem !important;
+        top: 12.5rem !important;
+    }
+    .files>.left>svg{
+        height: 1.2rem;
+        width: 1.2rem;
+        transform: translateY(-.5px);
+    }
+    .files>.right{
+        height: 2rem;
+        width: 2rem !important;
+        right: .5rem !important;
+        top: 12.5rem !important;
+    }
+    .files>.right>svg{
+        height: 1.2rem;
+        width: 1.2rem;
+        transform: translateY(-.5px);
+    }
+  
+}
+@media screen and (min-width:768px) and (max-width:1439px){
+    .createModal{
+        padding-left: 4rem;
+    }
+    .innerModal{
+        height:30rem;
+        width: 35rem;
+        margin-bottom: 0;
+    }
+    .files>div{
+        height: 27rem;
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .files{
+        height: 27rem !important;
+    }
+    .files>.left{
+        left: 2rem !important;
+        top: 12rem !important;
+    }
+    .files>.right{
+        right: 2rem !important;
+        top: 12rem !important;
+    }
+}
+@media screen and (min-width:1440px){
+    .createModal{
+        padding-left: 15rem;
+    }
+    .innerModal{
+        height:35rem;
+        width: 35rem;
+        margin-bottom: 4rem;
+    }
+    .files{
+     height: 32rem !important;
+    }
+}
